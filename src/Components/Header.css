@@ -1,0 +1,31 @@
+.Search {
+    background-color: grey;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.Input{
+    width: 20vw;
+    border: none;
+    color: black;
+    padding: 10px 20px;
+    text-decoration: none;
+    margin: 4px 2px;
+    border-radius: 16px;
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: bold;
+    border: 1px solid black;
+}
+
+.Web-name{
+    margin-left: 10px;
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: bold;
+}
+
+.Sign-in{
+    margin-right: 10px;
+}
