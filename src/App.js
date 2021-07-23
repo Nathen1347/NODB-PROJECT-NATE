@@ -41,7 +41,8 @@ update
         <Header shows={this.state.shows} />
         {/* <AddReview updateReview={this.updateReviews}/> */}
         <div className='Show-list'>
-          <ShowList shows={this.state.shows} />
+          <ShowList shows={this.state.shows}
+            updateReviews={this.state.updateReviews} />
         </div>
         <Queue queue={this.state.queue}/>
       </div>

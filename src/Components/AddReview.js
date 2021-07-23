@@ -12,10 +12,11 @@ class AddReview extends Component {
 handleReviewInput = (e) => this.setState({review: e.target.value})
 
 submitReview = () => {
-  const body = {review: this.state.review}
+  const body = {review: this.state.review, id: this.props.showID}
   axios.post('/api/shows', body)
   .then(res => this.props.updateReviews(res.data))
   .catch(err => console.log(err))
+
 }
 
   render() {

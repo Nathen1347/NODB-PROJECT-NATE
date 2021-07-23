@@ -21,7 +21,8 @@ const List = (props) => {
               <AddToQueue />
             </div>
             <div>
-              <Form />
+              <Form showID={props.showList.id}
+              updateReviews={props.updateReviews}/>
             </div>
           </div>
           <div><p className='Review'>{props.showList.review}</p></div>

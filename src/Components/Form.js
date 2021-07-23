@@ -12,7 +12,8 @@ class Form extends Component {
     return (
       <div>
         {this.state.reviewAddForm ? 
-          <AddReview />
+          <AddReview showID={this.props.showID}
+          updateReviews={this.props.updateReviews}/>
          : 
           <button className='Button' onClick={() => this.setState({ reviewAddForm: true })}>
             Leave Review

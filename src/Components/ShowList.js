@@ -4,7 +4,7 @@ const ShowList = (props) => {
     return (
         props.shows.map((show, index) => {
             return(
-                <List showList = {show} showIndex = {index}/>
+                <List showList = {show} showIndex = {index} updateReviews={props.updateReviews}/>
             )
         })
     )

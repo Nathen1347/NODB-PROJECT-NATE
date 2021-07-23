@@ -2,6 +2,7 @@ const data = require('./showData');
 let shows = [...data.shows]
 
 function addReviews(req, res){
+    console.log(req.body)
     const {review} = req.body
     shows.push({review})
 
