@@ -4,15 +4,13 @@ import Header from "./Components/Header";
 import ShowList from "./Components/ShowList";
 import "./App.css";
 import Queue from "./Components/Queue";
-import AddReview from "./Components/AddReview";
-
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
       shows: [],
-      queue:[]
+      queue: [],
     };
   }
 
@@ -27,24 +25,30 @@ class App extends Component {
     this.setState({ shows });
   };
 
-  
+  addToQueue = (add) => {
+    this.setState({ shows: [this.state.shows, add] });
+  };
 
-  updateReviews = (shows) =>{
-    this.setState({shows})
-  }
-update
+  handleInput = (search) => {
+    console.log(search);
+    this.setState({ searchShow: search });
+  };
+
   render() {
-
-    
+    // let filteredShows = this.state.shows.filter((show, index) => {
+    //   return show.title.includes(this.state.searchShow);
+    // })
     return (
       <div>
-        <Header shows={this.state.shows} />
-        {/* <AddReview updateReview={this.updateReviews}/> */}
-        <div className='Show-list'>
-          <ShowList shows={this.state.shows}
-            updateReviews={this.state.updateReviews} />
+        <Header shows={this.state.shows} handleInput={this.handleInput} />
+        <div className="Show-list">
+          <ShowList
+            shows={this.state.shows}
+            updateReviews={this.updateReviews}
+            // filteredShows={filteredShows}
+          />
         </div>
-        <Queue queue={this.state.queue}/>
+        <Queue queue={this.state.queue} addToQueue={this.addToQueue} />
       </div>
     );
   }

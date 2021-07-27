@@ -1,0 +1,9 @@
+.Leave-Review{
+    display: flex;
+    flex-direction: column;
+}
+
+.Edit{
+    display: flex;
+    flex-direction: column;
+}

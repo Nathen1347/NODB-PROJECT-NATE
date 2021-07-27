@@ -44,3 +44,29 @@
 .Review{
     color: white;
 }
+
+.Edit-Delete{
+    background-color: white;
+    border: 1px solid black;
+    color: black;
+    /* padding: 10px 20px; */
+    text-align: center;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 16px;
+    font-family: 'Rajdhani', sans-serif;
+    font: bolder;
+}
+
+.Input-Review{
+    border: none;
+    color: black;
+    padding: 5px 10px;
+    text-decoration: none;
+    margin: 4px 2px;
+    border-radius: 16px;
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: bold;
+    border: 1px solid black;
+}

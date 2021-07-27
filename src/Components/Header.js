@@ -1,19 +1,17 @@
 import "./List.css";
 import "./Header.css";
 import React, { Component } from "react";
-import ShowList from "./ShowList"; 
+
 
 class Header extends Component {
   constructor() {
     super();
     this.state = {
-      searchShow: "",
+      
     };
   }
-  
-  handleInput = (value) => {
-    this.setState({ searchShow: value });
-  };
+
+
 
   render() {
     return (
@@ -24,7 +22,7 @@ class Header extends Component {
         <div>
           <input
             className="Input"
-            onChange={e => this.handleInput(e.target.value)}
+            onChange={e => this.props.handleInput(e.target.value)}
             type="text"
             placeholder="Search Title"
           />

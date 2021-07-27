@@ -1,19 +1,29 @@
-const data = require('./showData');
-let shows = [...data.shows]
+const data = require("./showData");
+let shows = [...data.shows];
 
-function addReviews(req, res){
-    console.log(req.body)
-    const {review} = req.body
-    shows.push({review})
+function addReviews(req, res) {
+  console.log(req.body);
+  const { review, id } = req.body;
+  const newReview = {
+    review,
+    id,
+  };
 
-    res.status(200).send(shows)
+  shows.push(newReview);
+  res.status(200).send(shows);
 }
 
-function getShows(req, res){
-    res.status(200).send(shows)
+function getShows(req, res) {
+  res.status(200).send(shows);
 }
+
+function editReview() {}
+
+function deleteReview() {}
 
 module.exports = {
-    addReviews,
-    getShows
-}
+  addReviews,
+  getShows,
+  editReview,
+  deleteReview,
+};

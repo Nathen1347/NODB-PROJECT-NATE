@@ -21,11 +21,15 @@ const List = (props) => {
               <AddToQueue />
             </div>
             <div>
-              <Form showID={props.showList.id}
-              updateReviews={props.updateReviews}/>
+              <Form
+                showID={props.showList.id}
+                updateReviews={props.updateReviews}
+              />
             </div>
           </div>
-          <div><p className='Review'>{props.showList.review}</p></div>
+          <div>
+            <p className="Review">{props.showList.review}</p>
+          </div>
         </div>
       </div>
     </div>
