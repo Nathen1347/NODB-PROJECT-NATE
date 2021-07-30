@@ -71,6 +71,19 @@ module.exports = {
             title: "One Punch Man",
             imgUrl: "https://m.media-amazon.com/images/M/MV5BMTNmZDE2NDEtNTg3MS00OTE1LThlZGUtOGZkZTg0NTUyNGVmXkEyXkFqcGdeQXVyNTgyNTA4MjM@._V1_.jpg",
             review: ''
+        },
+        {
+            id:13,
+            title: "Bleach",
+            imgUrl: "https://www.voicy.network/Content/Clips/Images/5e6bef0f-7dd0-4386-ba04-cdc8531bd6eb.jpg",
+            review: ''
+        },
+        {
+            id:14,
+            title: "Castlevania",
+            imgUrl: "https://static.wikia.nocookie.net/castlevania/images/9/96/Ssposter2.jpg",
+            review: ''
         }
+
     ]
 }

@@ -1,7 +1,7 @@
 import List from "./List";
 
 const ShowList = (props) => {
-  return props.shows.map((show, index) => {
+  return props.filteredShows.map((show, index) => {
     return (
       <List
         showList={show}

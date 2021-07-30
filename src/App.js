@@ -11,6 +11,7 @@ class App extends Component {
     this.state = {
       shows: [],
       queue: [],
+      searchShow: ""
     };
   }
 
@@ -26,7 +27,7 @@ class App extends Component {
   };
 
   addToQueue = (add) => {
-    this.setState({ shows: [this.state.shows, add] });
+    this.setState({ shows: [...this.state.shows, add] });
   };
 
   handleInput = (search) => {
@@ -35,9 +36,9 @@ class App extends Component {
   };
 
   render() {
-    // let filteredShows = this.state.shows.filter((show, index) => {
-    //   return show.title.includes(this.state.searchShow);
-    // })
+    let filteredShows = this.state.shows.filter((show, index) => {
+      return show.title.toString().toLowerCase().includes(this.state.searchShow.toString().toLowerCase());
+    })
     return (
       <div>
         <Header shows={this.state.shows} handleInput={this.handleInput} />
@@ -45,7 +46,7 @@ class App extends Component {
           <ShowList
             shows={this.state.shows}
             updateReviews={this.updateReviews}
-            // filteredShows={filteredShows}
+            filteredShows={filteredShows}
           />
         </div>
         <Queue queue={this.state.queue} addToQueue={this.addToQueue} />

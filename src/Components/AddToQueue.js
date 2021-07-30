@@ -8,14 +8,12 @@ class AddToQueue extends Component {
     };
   }
 
-  handleAdd = (props) => {
-    this.props.add(this.state.queue);
-  };
+
 
   render() {
     return (
       <div>
-        <button className="Button" onClick={this.handleAdd}>
+        <button className="Button" onClick={this.props.addToQueue}>
           +
         </button>
       </div>

@@ -13,7 +13,6 @@ const Queue = (props) => {
         </div>
       </div>
       <div className="Queue-con">
-        <p>titles</p>
         <AddToQueue queue={props.queue} addToQueue={props.addToQueue} />
       </div>
     </div>

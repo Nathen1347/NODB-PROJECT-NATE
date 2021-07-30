@@ -28,6 +28,7 @@ const List = (props) => {
             </div>
           </div>
           <div>
+            <p className="Review-tab">Reviews</p>
             <p className="Review">{props.showList.review}</p>
           </div>
         </div>

@@ -7,6 +7,7 @@ class AddReview extends Component {
     super(props);
     this.state = {
       review: "",
+      editReview: "",
       editButtonForm: false,
     };
   }
@@ -23,15 +24,20 @@ class AddReview extends Component {
       .catch((err) => console.log(err));
   };
   
-  editReview = (id) => {
+  editReview = () => {
+    const body = { editReview: this.state.editReview, id: this.props.showID}
     axios
-      .put(`/api/shows/${id}/${this.state.review}`)
-      .then(({ data }) => this.setState({ shows: data }))
+      .put(`/api/shows/`, body)
+      .then(({ res}) => this.props.updateReviews( res.data ))
       .catch((err) => console.log(err));
   };
 
-  deleteReview = (id) => {};
-
+  deleteReview = (id) => {;
+  axios.delete(`/api/shows?deleteReview=${id}`)
+  .then(({data}) => this.setState({shows: data}))
+  .catch((err) => console.log(err))
+  }
+  
   render() {
     return (
       <div className="Leave-Review">
@@ -52,16 +58,11 @@ class AddReview extends Component {
           <div>
             {this.state.editButtonForm ? (
               <div>
-                <input
-                  className="Input-Review"
-                  onChange={this.handleReviewInput}
-                  type="text"
-                  placeholder="Edit Review"
-                />
+               
 
                 <div>
-                  <button className="Edit-Delete">Update</button>
-                  <button className="Edit-Delete">Delete Review</button>
+                  <button className="Edit-Delete" onClick={this.submitReview}>Update</button>
+                  <button className="Edit-Delete" onCLick={this.deleteReview}>Delete Review</button>
                 </div>
               </div>
             ) : (
